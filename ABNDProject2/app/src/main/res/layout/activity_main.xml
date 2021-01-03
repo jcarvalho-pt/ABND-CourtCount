@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+   xmlns:app="http://schemas.android.com/apk/res-auto"
+   xmlns:tools="http://schemas.android.com/tools"
+   android:layout_width="match_parent"
+   android:layout_height="match_parent"
+   tools:context=".MainActivity">
+
+   <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+
+      <LinearLayout
+         android:id="@+id/score_board"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:orientation="horizontal">
+
+         <LinearLayout
+            android:id="@+id/score_home"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:fontFamily="sans-serif-medium"
+               android:gravity="center_horizontal"
+               android:padding="16dp"
+               android:text="@string/str_home"
+               android:textColor="#919191"
+               android:textSize="16sp" />
+
+            <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal">
+
+               <TextView
+                  android:id="@+id/score_home_team"
+                  android:layout_width="0dp"
+                  android:layout_height="wrap_content"
+                  android:layout_weight="3"
+                  android:gravity="center_horizontal"
+                  android:paddingBottom="24dp"
+                  android:text="0"
+                  android:textColor="@color/black"
+                  android:textSize="56sp" />
+
+               <TextView
+                  android:id="@+id/faults_home_team"
+                  android:layout_width="0dp"
+                  android:layout_height="wrap_content"
+                  android:layout_weight="1"
+                  android:paddingBottom="36dp"
+                  android:text="0"
+                  android:textColor="@color/black"
+                  android:textSize="24sp" />
+
+            </LinearLayout>
+
+            <Button
+               android:id="@+id/goal_home_team"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginLeft="16dp"
+               android:layout_marginRight="16dp"
+               android:layout_marginBottom="8dp"
+               android:onClick="btnGoalHomeOnClick"
+               android:text="@string/str_goal"
+               android:textColor="@color/black"
+               android:textSize="14sp" />
+
+            <Button
+               android:id="@+id/fault_home_team"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginLeft="16dp"
+               android:layout_marginRight="16dp"
+               android:layout_marginBottom="8dp"
+               android:onClick="btnFaultHomeOnClick"
+               android:text="@string/str_fault"
+               android:textColor="@color/black"
+               android:textSize="14sp" />
+
+         </LinearLayout>
+
+         <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="16dp"
+            android:background="@android:color/darker_gray"
+            android:paddingTop="8dp" />
+
+         <LinearLayout
+            android:id="@+id/score_away"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+
+            <TextView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:fontFamily="sans-serif-medium"
+               android:gravity="center_horizontal"
+               android:padding="16dp"
+               android:text="@string/str_away"
+               android:textColor="#919191"
+               android:textSize="16sp" />
+
+            <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal">
+
+               <TextView
+                  android:id="@+id/score_away_team"
+                  android:layout_width="0dp"
+                  android:layout_height="wrap_content"
+                  android:layout_weight="3"
+                  android:gravity="center_horizontal"
+                  android:paddingBottom="24dp"
+                  android:text="0"
+                  android:textColor="@color/black"
+                  android:textSize="56sp" />
+
+               <TextView
+                  android:id="@+id/faults_away_team"
+                  android:layout_width="0dp"
+                  android:layout_height="wrap_content"
+                  android:layout_weight="1"
+                  android:paddingBottom="36dp"
+                  android:text="0"
+                  android:textColor="@color/black"
+                  android:textSize="24sp" />
+
+            </LinearLayout>
+
+            <Button
+               android:id="@+id/goal_away_team"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginLeft="16dp"
+               android:layout_marginRight="16dp"
+               android:layout_marginBottom="8dp"
+               android:onClick="btnGoalAwayOnClick"
+               android:text="@string/str_goal"
+               android:textColor="@color/black"
+               android:textSize="14sp" />
+
+            <Button
+               android:id="@+id/fault_away_team"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginLeft="16dp"
+               android:layout_marginRight="16dp"
+               android:layout_marginBottom="8dp"
+               android:onClick="btnFaultAwayOnClick"
+               android:text="@string/str_fault"
+               android:textColor="@color/black"
+               android:textSize="14sp" />
+
+         </LinearLayout>
+
+      </LinearLayout>
+
+      <Button
+         android:id="@+id/reset_2nd_half"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_below="@+id/score_board"
+         android:layout_marginLeft="16dp"
+         android:layout_marginRight="16dp"
+         android:layout_marginBottom="8dp"
+         android:onClick="btn2ndHalfOnClick"
+         android:text="@string/str_reset2nd"
+         android:textColor="@color/black"
+         android:textSize="14sp" />
+
+      <Button
+         android:id="@+id/reset"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_below="@+id/reset_2nd_half"
+         android:layout_centerInParent="true"
+         android:layout_marginLeft="16dp"
+         android:layout_marginTop="32dp"
+         android:layout_marginRight="16dp"
+         android:onClick="btnResetOnClick"
+         android:text="@string/str_reset"
+         android:textColor="@color/black"
+         android:textSize="16sp" />
+
+      <TextView
+         android:id="@+id/messages"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:layout_below="@+id/reset"
+         android:layout_marginLeft="16dp"
+         android:layout_marginRight="16dp"
+         android:layout_marginBottom="8dp"
+         android:text="@string/str_description"
+         android:textSize="16sp" />
+
+   </RelativeLayout>
+</ScrollView>

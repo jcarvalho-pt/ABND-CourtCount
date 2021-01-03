@@ -1,0 +1,13 @@
+<resources>
+   <string name="app_name">Indoors Soccer Board</string>
+   <string name="kick_away">Free kick to the away team.</string>
+   <string name="kick_home">Free kick to the home team.</string>
+   <string name="fault">faults</string>
+   <string name="str_home">Home Team</string>
+   <string name="str_away">Away Team</string>
+   <string name="str_goal">Goal!</string>
+   <string name="str_fault">Fault</string>
+   <string name="str_reset">Reset Board</string>
+   <string name="str_reset2nd">2nd Half Reset</string>
+   <string name="str_description">Each match has two 20 mins parts. Where a team reaches five fouls in one part, for each next infraction, the opponent is entitled to a free kick without a barrier.</string>
+</resources>
